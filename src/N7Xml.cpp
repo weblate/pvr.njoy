@@ -1,8 +1,8 @@
 
 
 #include "N7Xml.h"
-#include "tinyxml/tinyxml.h"
-#include "tinyxml/XMLUtils.h"
+#include "tinyxml.h"
+#include "kodi/util/XMLUtils.h"
 
 using namespace ADDON;
 

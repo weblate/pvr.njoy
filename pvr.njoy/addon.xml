@@ -10,12 +10,11 @@
   </requires>
   <extension
     point="xbmc.pvrclient"
-    library_osx="Kodi_Njoy.pvr"
-    library_linux="Kodi_Njoy.pvr"
-    library_freebsd="Kodi_Njoy.pvr"
-    library_wingl="Kodi_njoy_win32.dll"
-    library_windx="Kodi_njoy_win32.dll"
-    library_android="libKodi_Njoy.so"/>
+    library_linux="pvr.njoy.so"
+    library_osx="pvr.njoy.dylib"
+    library_freebsd="pvr.njoy.so"
+    library_windx="pvr.njoy.dll"
+    library_android="libpvr.njoy.so"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="am">Njoy N7 PVR Client</summary>
     <summary lang="bg">Njoy N7 ПВР клиент</summary>
@@ -69,6 +68,6 @@
     <summary lang="vi">Phần mềm PVR cho Njoy N7</summary>
     <summary lang="zh">Njoy N7 PVR 客户端</summary>
     <summary lang="zh_TW">Njoy N7 PVR 用戶端</summary>
-    <platform>@OS@</platform>
+    <platform>all</platform>
   </extension>
 </addon>
