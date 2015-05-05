@@ -11,15 +11,17 @@ option(PACKAGE_ZIP "Package Zip file?" OFF)
 find_package(TinyXML REQUIRED)
 find_package(kodi REQUIRED)
 find_package(kodiplatform REQUIRED)
+find_package(platform REQUIRED)
 
 include_directories(${kodiplatform_INCLUDE_DIRS}
+                    ${platform_INCLUDE_DIRS}
                     ${TINYXML_INCLUDE_DIR}
                     ${KODI_INCLUDE_DIR})
 
 set(NJOY_SOURCES src/client.cpp
                  src/N7Xml.cpp)
 
-set(DEPLIBS ${kodiplatform_LIBRARIES}
+set(DEPLIBS ${platform_LIBRARIES}
             ${TINYXML_LIBRARIES})
 
 build_addon(pvr.njoy NJOY DEPLIBS)
