@@ -1,3 +1,6 @@
+1.10.5
+- Updated Language files from Transifex
+
 v1.10.4
 - Updated to use new libplatform-dev
 
