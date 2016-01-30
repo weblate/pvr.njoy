@@ -1,0 +1,23 @@
+# build artifacts
+build/
+debian/changelog
+debian/files
+debian/kodi-pvr-njoy-dbg.debhelper.log
+debian/kodi-pvr-njoy-dbg.substvars
+debian/kodi-pvr-njoy-dbg/
+debian/kodi-pvr-njoy.debhelper.log
+debian/kodi-pvr-njoy.postinst.debhelper
+debian/kodi-pvr-njoy.postrm.debhelper
+debian/kodi-pvr-njoy.substvars
+debian/kodi-pvr-njoy/
+debian/tmp/
+obj-x86_64-linux-gnu/
+pvr.njoy/addon.xml
+
+# clion
+.idea/
+
+# Eclipse/CDT
+.cproject
+.project
+.settings/
