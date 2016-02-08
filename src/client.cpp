@@ -259,7 +259,6 @@ PVR_ERROR OpenDialogChannelSettings(const PVR_CHANNEL &channel) { return PVR_ERR
 PVR_ERROR OpenDialogChannelAdd(const PVR_CHANNEL &channel) { return PVR_ERROR_NOT_IMPLEMENTED; }
 bool OpenLiveStream(const PVR_CHANNEL &channel) { return false; }
 void CloseLiveStream(void) {}
-int GetCurrentClientChannel() { return -1; }
 bool SwitchChannel(const PVR_CHANNEL &channelinfo) { return false; }
 PVR_ERROR SignalStatus(PVR_SIGNAL_STATUS &signalStatus) { return PVR_ERROR_NOT_IMPLEMENTED; }bool OpenRecordedStream(const PVR_RECORDING &recording) { return false; }
 void CloseRecordedStream(void) {}
