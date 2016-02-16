@@ -21,7 +21,6 @@
 
 #include "client.h"
 #include "kodi/xbmc_pvr_dll.h"
-#include "kodi/libKODI_guilib.h"
 #include "N7Xml.h"
 #include "p8-platform/util/util.h"
 
@@ -67,12 +66,12 @@ const char* GetMininumPVRAPIVersion(void)
 
 const char* GetGUIAPIVersion(void)
 {
-  return KODI_GUILIB_API_VERSION;
+  return ""; // GUI API not used
 }
 
 const char* GetMininumGUIAPIVersion(void)
 {
-  return KODI_GUILIB_MIN_API_VERSION;
+  return ""; // GUI API not used
 }
 
 ADDON_STATUS ADDON_Create(void* hdl, void* props)
@@ -260,7 +259,6 @@ PVR_ERROR OpenDialogChannelSettings(const PVR_CHANNEL &channel) { return PVR_ERR
 PVR_ERROR OpenDialogChannelAdd(const PVR_CHANNEL &channel) { return PVR_ERROR_NOT_IMPLEMENTED; }
 bool OpenLiveStream(const PVR_CHANNEL &channel) { return false; }
 void CloseLiveStream(void) {}
-int GetCurrentClientChannel() { return -1; }
 bool SwitchChannel(const PVR_CHANNEL &channelinfo) { return false; }
 PVR_ERROR SignalStatus(PVR_SIGNAL_STATUS &signalStatus) { return PVR_ERROR_NOT_IMPLEMENTED; }bool OpenRecordedStream(const PVR_RECORDING &recording) { return false; }
 void CloseRecordedStream(void) {}
@@ -300,6 +298,8 @@ bool IsTimeshifting(void) { return false; }
 time_t GetPlayingTime() { return 0; }
 time_t GetBufferTimeStart() { return 0; }
 time_t GetBufferTimeEnd() { return 0; }
+bool IsRealTimeStream() { return true; }
 PVR_ERROR UndeleteRecording(const PVR_RECORDING& recording) { return PVR_ERROR_NOT_IMPLEMENTED; }
 PVR_ERROR DeleteAllRecordingsFromTrash() { return PVR_ERROR_NOT_IMPLEMENTED; }
+PVR_ERROR SetEPGTimeFrame(int) { return PVR_ERROR_NOT_IMPLEMENTED; }
 } //end extern "C"
