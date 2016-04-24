@@ -188,14 +188,25 @@ void ADDON_FreeSettings()
   return;
 }
 
-void ADDON_Announce(const char *flag, const char *sender, const char *message, const void *data)
-{
-  return;
-}
-
 /***********************************************************
  * PVR Client AddOn specific public library functions
  ***********************************************************/
+
+void OnSystemSleep()
+{
+}
+
+void OnSystemWake()
+{
+}
+
+void OnPowerSavingActivated()
+{
+}
+
+void OnPowerSavingDeactivated()
+{
+}
 
 PVR_ERROR GetAddonCapabilities(PVR_ADDON_CAPABILITIES *pCapabilities)
 {
