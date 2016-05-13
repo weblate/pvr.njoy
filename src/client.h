@@ -21,8 +21,8 @@
  */
 
 #include "p8-platform/util/StdString.h"
-#include "kodi/libXBMC_addon.h"
-#include "kodi/libXBMC_pvr.h"
+#include "libXBMC_addon.h"
+#include "libXBMC_pvr.h"
 
 #define DEFAULT_HOST  "127.0.0.1"
 #define DEFAULT_PORT  80
