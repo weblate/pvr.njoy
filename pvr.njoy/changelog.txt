@@ -1,3 +1,6 @@
+2.3.1
+- Fix includes
+
 2.3.0
 - Updated to PVR addon API v5.2.0
 
