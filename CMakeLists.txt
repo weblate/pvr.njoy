@@ -9,7 +9,7 @@ enable_language(CXX)
 option(PACKAGE_ZIP "Package Zip file?" OFF)
 
 find_package(TinyXML REQUIRED)
-find_package(kodi REQUIRED)
+find_package(Kodi REQUIRED)
 find_package(kodiplatform REQUIRED)
 find_package(p8-platform REQUIRED)
 
