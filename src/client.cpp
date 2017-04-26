@@ -144,16 +144,6 @@ ADDON_STATUS ADDON_GetStatus()
   return m_CurStatus;
 }
 
-bool ADDON_HasSettings()
-{
-  return true;
-}
-
-unsigned int ADDON_GetSettings(ADDON_StructSetting ***sSet)
-{
-  return 0;
-}
-
 ADDON_STATUS ADDON_SetSetting(const char *settingName, const void *settingValue)
 {
   string str = settingName;
@@ -179,11 +169,6 @@ ADDON_STATUS ADDON_SetSetting(const char *settingName, const void *settingValue)
 }
 
 void ADDON_Stop()
-{
-  return;
-}
-
-void ADDON_FreeSettings()
 {
   return;
 }
