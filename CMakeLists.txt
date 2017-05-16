@@ -21,6 +21,9 @@ include_directories(${kodiplatform_INCLUDE_DIRS}
 set(NJOY_SOURCES src/client.cpp
                  src/N7Xml.cpp)
 
+set(NJOY_HEADERS src/client.h
+                 src/N7Xml.h)
+
 set(DEPLIBS ${kodiplatform_LIBRARIES}
             ${p8-platform_LIBRARIES}
             ${TINYXML_LIBRARIES})
