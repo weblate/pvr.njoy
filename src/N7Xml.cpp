@@ -109,7 +109,6 @@ PVR_ERROR N7Xml::requestChannelList(ADDON_HANDLE handle, bool bRadio)
       tag.iUniqueId       = channel.iUniqueId;
       tag.iChannelNumber  = channel.iChannelNumber;
       strncpy(tag.strChannelName, channel.strChannelName.c_str(), sizeof(tag.strChannelName) - 1);
-      strncpy(tag.strStreamURL, channel.strStreamURL.c_str(), sizeof(tag.strStreamURL) - 1);
       strncpy(tag.strIconPath, channel.strIconPath.c_str(), sizeof(tag.strIconPath) - 1);
 
       XBMC->Log(LOG_DEBUG, "N7Xml - Loaded channel - %s.", tag.strChannelName);
@@ -123,3 +122,28 @@ PVR_ERROR N7Xml::requestChannelList(ADDON_HANDLE handle, bool bRadio)
 
   return PVR_ERROR_NO_ERROR;
 }
+
+PVR_ERROR N7Xml::GetChannelStreamProperties(const PVR_CHANNEL* channel, PVR_NAMED_VALUE* props, unsigned int* prop_size)
+{
+  if (!m_channels.empty())
+  {
+    std::vector<PVRChannel>::const_iterator item;
+    for (item = m_channels.begin(); item != m_channels.end(); ++item)
+    {
+       const PVRChannel& chan = *item;
+       if (chan.iUniqueId == channel->iUniqueId)
+       {
+         strncpy(props[0].strName, PVR_STREAM_PROPERTY_STREAMURL,
+           sizeof(props[0].strName)-1);
+         props[0].strName[sizeof(props[0].strName)-1] = '\0';
+         strncpy(props[0].strValue, chan.strStreamURL.c_str(),
+           sizeof(props[0].strValue)-1);
+         props[0].strValue[sizeof(props[0].strValue)-1] = '\0';
+         *prop_size = 1;
+         return PVR_ERROR_NO_ERROR;
+       }
+    }
+  }
+  return PVR_ERROR_UNKNOWN;
+}
+
