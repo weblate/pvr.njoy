@@ -20,7 +20,6 @@
  *
  */
 
-#include "p8-platform/util/StdString.h"
 #include "libXBMC_addon.h"
 #include "libXBMC_pvr.h"
 
@@ -28,11 +27,11 @@
 #define DEFAULT_PORT  80
 
 extern bool         g_bCreated;           ///< Shows that the Create function was successfully called
-extern CStdString   g_szUserPath;         ///< The Path to the user directory inside user profile
-extern CStdString   g_szClientPath;       ///< The Path where this driver is located
+extern std::string  g_szUserPath;         ///< The Path to the user directory inside user profile
+extern std::string  g_szClientPath;       ///< The Path where this driver is located
 
 /* Client Settings */
-extern CStdString   g_strHostname;
+extern std::string  g_strHostname;
 extern int          g_iPort;
 
 extern ADDON::CHelper_libXBMC_addon *XBMC;

@@ -1,6 +1,8 @@
 
 
 #include "N7Xml.h"
+
+#include <p8-platform/util/StringUtils.h>
 #include "tinyxml.h"
 #include "util/XMLUtils.h"
 
@@ -38,9 +40,9 @@ int N7Xml::getChannelsAmount()
 
 void N7Xml::list_channels()
 {
-  CStdString strUrl;
-  strUrl.Format("http://%s:%i/n7channel_nt.xml", g_strHostname.c_str(), g_iPort);
-  CStdString strXML;
+  std::string strUrl;
+  strUrl = StringUtils::Format("http://%s:%i/n7channel_nt.xml", g_strHostname.c_str(), g_iPort);
+  std::string strXML;
 
   CCurlFile http;
   if(!http.Get(strUrl, strXML))
@@ -63,7 +65,7 @@ void N7Xml::list_channels()
       TiXmlNode *pChannelNode = NULL;
       while ((pChannelNode = channelsNode->IterateChildren(pChannelNode)) != NULL)
       {
-        CStdString strTmp;
+        std::string strTmp;
         PVRChannel channel;
 
         /* unique ID */
