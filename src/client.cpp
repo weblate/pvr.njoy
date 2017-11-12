@@ -31,7 +31,7 @@ using namespace ADDON;
  * Default values are defined inside client.h
  * and exported to the other source files.
  */
-CStdString   g_strHostname     = DEFAULT_HOST;
+std::string  g_strHostname     = DEFAULT_HOST;
 int          g_iPort           = DEFAULT_PORT;
 
 ///* Client member variables */
@@ -39,8 +39,8 @@ int          g_iPort           = DEFAULT_PORT;
 int          m_iCurrentChannel = 1;
 ADDON_STATUS m_CurStatus       = ADDON_STATUS_UNKNOWN;
 bool         g_bCreated        = false;
-CStdString   g_szUserPath      = "";
-CStdString   g_szClientPath    = "";
+std::string  g_szUserPath      = "";
+std::string  g_szClientPath    = "";
 N7Xml*       m_data            = NULL;
 CHelper_libXBMC_addon *XBMC    = NULL;
 CHelper_libXBMC_pvr   *PVR     = NULL;

@@ -1,3 +1,6 @@
+v3.2.1
+- Remove StdString usage
+
 v3.2.0
 - Updated to PVR addon API v5.7.0
 
