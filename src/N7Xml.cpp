@@ -127,6 +127,9 @@ PVR_ERROR N7Xml::requestChannelList(ADDON_HANDLE handle, bool bRadio)
 
 PVR_ERROR N7Xml::GetChannelStreamProperties(const PVR_CHANNEL* channel, PVR_NAMED_VALUE* props, unsigned int* prop_size)
 {
+  if (*prop_size < 2)
+    return PVR_ERROR_INVALID_PARAMETERS;
+
   if (!m_channels.empty())
   {
     std::vector<PVRChannel>::const_iterator item;
@@ -135,13 +138,11 @@ PVR_ERROR N7Xml::GetChannelStreamProperties(const PVR_CHANNEL* channel, PVR_NAME
        const PVRChannel& chan = *item;
        if (chan.iUniqueId == channel->iUniqueId)
        {
-         strncpy(props[0].strName, PVR_STREAM_PROPERTY_STREAMURL,
-           sizeof(props[0].strName)-1);
-         props[0].strName[sizeof(props[0].strName)-1] = '\0';
-         strncpy(props[0].strValue, chan.strStreamURL.c_str(),
-           sizeof(props[0].strValue)-1);
-         props[0].strValue[sizeof(props[0].strValue)-1] = '\0';
-         *prop_size = 1;
+         strncpy(props[0].strName, PVR_STREAM_PROPERTY_STREAMURL, sizeof(props[0].strName) - 1);
+         strncpy(props[0].strValue, chan.strStreamURL.c_str(), sizeof(props[0].strValue) - 1);
+         strncpy(props[1].strName, PVR_STREAM_PROPERTY_ISREALTIMESTREAM, sizeof(props[1].strName) - 1);
+         strncpy(props[1].strValue, "true", sizeof(props[1].strValue) - 1);
+         *prop_size = 2;
          return PVR_ERROR_NO_ERROR;
        }
     }
