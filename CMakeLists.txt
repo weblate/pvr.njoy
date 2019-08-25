@@ -3,8 +3,6 @@ project(pvr.njoy)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR})
 
-option(PACKAGE_ZIP "Package Zip file?" OFF)
-
 find_package(TinyXML REQUIRED)
 find_package(Kodi REQUIRED)
 find_package(kodiplatform REQUIRED)
