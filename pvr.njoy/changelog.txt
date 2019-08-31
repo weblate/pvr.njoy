@@ -1,5 +1,13 @@
+v4.0.1
+- Update build system version and cleanup
+- Fix package check for TinyXML
+- Added AppVeyor for Windows related build tests
+
 v4.0.0
 - Update to PVR addon API v6.0.0
+
+v3.4.2
+- Updated Language files from Transifex
 
 v3.4.1
 - Updated to PVR addon API v5.10.1
