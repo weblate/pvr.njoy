@@ -67,6 +67,9 @@
     <summary lang="zh_CN">Njoy N7 PVR 客户端</summary>
     <summary lang="zh_TW">Njoy N7 PVR 用戶端</summary>
     <platform>@PLATFORM@</platform>
+    <license>GPL-2.0</license>
+    <source>https://github.com/kodi-pvr/pvr.njoy</source>
+    <forum>https://forum.kodi.tv/forumdisplay.php?fid=173</forum>
     <assets>
       <icon>icon.png</icon>
     </assets>
