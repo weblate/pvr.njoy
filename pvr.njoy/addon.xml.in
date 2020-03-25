@@ -67,5 +67,8 @@
     <summary lang="zh_CN">Njoy N7 PVR 客户端</summary>
     <summary lang="zh_TW">Njoy N7 PVR 用戶端</summary>
     <platform>@PLATFORM@</platform>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
   </extension>
 </addon>
