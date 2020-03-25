@@ -1,4 +1,10 @@
-
+/*
+ *  Copyright (C) 2005-2020 Team Kodi
+ *  https://kodi.tv
+ *
+ *  SPDX-License-Identifier: GPL-2.0-or-later
+ *  See LICENSE.md for more information.
+ */
 
 #include "N7Xml.h"
 
@@ -149,4 +155,3 @@ PVR_ERROR N7Xml::GetChannelStreamProperties(const PVR_CHANNEL* channel, PVR_NAME
   }
   return PVR_ERROR_UNKNOWN;
 }
-
