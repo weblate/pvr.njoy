@@ -44,7 +44,7 @@ ADDON_STATUS ADDON_Create(void* hdl, void* props)
   if (!props)
     return ADDON_STATUS_UNKNOWN;
 
-  PVR_PROPERTIES* pvrprops = (PVR_PROPERTIES*)props;
+  AddonProperties_PVR* pvrprops = (AddonProperties_PVR*)props;
 
   XBMC = new CHelper_libXBMC_addon;
   if (!XBMC->RegisterMe(hdl))
@@ -153,7 +153,7 @@ void OnPowerSavingDeactivated()
 {
 }
 
-PVR_ERROR GetAddonCapabilities(PVR_ADDON_CAPABILITIES *pCapabilities)
+PVR_ERROR GetCapabilities(PVR_ADDON_CAPABILITIES *pCapabilities)
 {
   pCapabilities->bSupportsTV                 = true;
   pCapabilities->bSupportsRecordings = false;
@@ -222,7 +222,8 @@ PVR_ERROR OpenDialogChannelSettings(const PVR_CHANNEL &channel) { return PVR_ERR
 PVR_ERROR OpenDialogChannelAdd(const PVR_CHANNEL &channel) { return PVR_ERROR_NOT_IMPLEMENTED; }
 bool OpenLiveStream(const PVR_CHANNEL &channel) { return false; }
 void CloseLiveStream(void) {}
-PVR_ERROR SignalStatus(PVR_SIGNAL_STATUS &signalStatus) { return PVR_ERROR_NOT_IMPLEMENTED; }bool OpenRecordedStream(const PVR_RECORDING &recording) { return false; }
+PVR_ERROR GetSignalStatus(int channelUid, PVR_SIGNAL_STATUS *signalStatus) { return PVR_ERROR_NOT_IMPLEMENTED; }
+bool OpenRecordedStream(const PVR_RECORDING &recording) { return false; }
 void CloseRecordedStream(void) {}
 int ReadRecordedStream(unsigned char *pBuffer, unsigned int iBufferSize) { return 0; }
 long long SeekRecordedStream(long long iPosition, int iWhence /* = SEEK_SET */) { return 0; }
@@ -260,7 +261,7 @@ bool IsRealTimeStream() { return true; }
 PVR_ERROR UndeleteRecording(const PVR_RECORDING& recording) { return PVR_ERROR_NOT_IMPLEMENTED; }
 PVR_ERROR DeleteAllRecordingsFromTrash() { return PVR_ERROR_NOT_IMPLEMENTED; }
 PVR_ERROR SetEPGTimeFrame(int) { return PVR_ERROR_NOT_IMPLEMENTED; }
-PVR_ERROR GetDescrambleInfo(PVR_DESCRAMBLE_INFO*) { return PVR_ERROR_NOT_IMPLEMENTED; }
+PVR_ERROR GetDescrambleInfo(int, PVR_DESCRAMBLE_INFO*) { return PVR_ERROR_NOT_IMPLEMENTED; }
 PVR_ERROR SetRecordingLifetime(const PVR_RECORDING*) { return PVR_ERROR_NOT_IMPLEMENTED; }
 PVR_ERROR GetStreamTimes(PVR_STREAM_TIMES *) { return PVR_ERROR_NOT_IMPLEMENTED; }
 PVR_ERROR GetRecordingStreamProperties(const PVR_RECORDING*, PVR_NAMED_VALUE*, unsigned int*) { return PVR_ERROR_NOT_IMPLEMENTED; }
