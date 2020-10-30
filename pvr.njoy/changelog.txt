@@ -1,5 +1,8 @@
+v7.0.0
+- Update PVR API 7.0.2
+
 v6.0.0
-- PVR API 7.0.0
+- Update PVR API 7.0.0
 - Rework addon to support new API interface
 - Code cleanup
 
