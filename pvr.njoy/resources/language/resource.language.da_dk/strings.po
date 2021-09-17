@@ -17,6 +17,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.7.2\n"
 
+msgctxt "Addon Summary"
+msgid "Njoy N7 PVR Client"
+msgstr "Njoy N7 PVR Klient"
+
 msgctxt "#30000"
 msgid "N7 IP"
 msgstr "N7 IP"
