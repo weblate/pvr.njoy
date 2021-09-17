@@ -9,6 +9,13 @@
     point="kodi.pvrclient"
     library_@PLATFORM@="@LIBRARY_FILENAME@"/>
   <extension point="xbmc.addon.metadata">
+    <platform>@PLATFORM@</platform>
+    <license>GPL-2.0-or-later</license>
+    <source>https://github.com/kodi-pvr/pvr.njoy</source>
+    <forum>https://forum.kodi.tv/forumdisplay.php?fid=173</forum>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
     <summary lang="af_ZA">Njoy N7 PVR Kliënt</summary>
     <summary lang="am_ET">Njoy N7 PVR Client</summary>
     <summary lang="be_BY">Кліент Njoy N7 PVR</summary>
@@ -66,12 +73,5 @@
     <summary lang="vi_VN">Phần mềm PVR cho Njoy N7</summary>
     <summary lang="zh_CN">Njoy N7 PVR 客户端</summary>
     <summary lang="zh_TW">Njoy N7 PVR 用戶端</summary>
-    <platform>@PLATFORM@</platform>
-    <license>GPL-2.0-or-later</license>
-    <source>https://github.com/kodi-pvr/pvr.njoy</source>
-    <forum>https://forum.kodi.tv/forumdisplay.php?fid=173</forum>
-    <assets>
-      <icon>icon.png</icon>
-    </assets>
   </extension>
 </addon>
