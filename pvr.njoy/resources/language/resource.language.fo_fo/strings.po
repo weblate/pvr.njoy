@@ -20,7 +20,7 @@ msgctxt "Addon Summary"
 msgid "Njoy N7 PVR Client"
 msgstr ""
 
-#settings labels
+# settings labels
 msgctxt "#30000"
 msgid "N7 IP"
 msgstr ""
