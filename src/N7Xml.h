@@ -22,8 +22,8 @@ public:
   bool Get(const std::string& strURL, std::string& strResult);
 };
 
-class ATTRIBUTE_HIDDEN N7Xml : public kodi::addon::CAddonBase,
-                               public kodi::addon::CInstancePVRClient
+class ATTR_DLL_LOCAL N7Xml : public kodi::addon::CAddonBase,
+                             public kodi::addon::CInstancePVRClient
 
 {
 public:
@@ -31,7 +31,7 @@ public:
   ~N7Xml() override = default;
 
   ADDON_STATUS SetSetting(const std::string& settingName,
-                          const kodi::CSettingValue& settingValue) override;
+                          const kodi::addon::CSettingValue& settingValue) override;
 
   PVR_ERROR GetCapabilities(kodi::addon::PVRCapabilities& capabilities) override;
   PVR_ERROR GetBackendName(std::string& name) override;

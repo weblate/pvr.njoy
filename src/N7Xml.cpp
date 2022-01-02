@@ -27,14 +27,14 @@ N7Xml::N7Xml()
 {
   kodi::Log(ADDON_LOG_DEBUG, "Creating N7 PVR-Client");
 
-  m_strHostname = kodi::GetSettingString("n7host", DEFAULT_HOST);
-  m_iPort = kodi::GetSettingInt("n7port", DEFAULT_PORT);
+  m_strHostname = kodi::addon::GetSettingString("n7host", DEFAULT_HOST);
+  m_iPort = kodi::addon::GetSettingInt("n7port", DEFAULT_PORT);
 
   list_channels();
 }
 
 ADDON_STATUS N7Xml::SetSetting(const std::string& settingName,
-                               const kodi::CSettingValue& settingValue)
+                               const kodi::addon::CSettingValue& settingValue)
 {
   if (settingName == "n7host")
   {
