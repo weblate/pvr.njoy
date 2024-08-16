@@ -120,6 +120,7 @@ PVR_ERROR N7Xml::GetChannels(bool radio, kodi::addon::PVRChannelsResultSet& resu
 }
 
 PVR_ERROR N7Xml::GetChannelStreamProperties(const kodi::addon::PVRChannel& channel,
+                                            PVR_SOURCE source,
                                             std::vector<kodi::addon::PVRStreamProperty>& properties)
 {
   for (const auto& chan : m_channels)
